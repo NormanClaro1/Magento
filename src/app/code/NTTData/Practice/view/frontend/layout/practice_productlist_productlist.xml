@@ -3,7 +3,7 @@
 
      <head>
 
-        <css src="NTTData_Practice::css/styles.css"/>
+        <css src="NTTData_Practice::css/test.css"/>
 
         <css src="NTTData_Practice::js/test.js"/>
 
@@ -15,10 +15,10 @@
                 name="practice_productlist_productlist"
                 template="NTTData_Practice::test/list/productlist.phtml" />
         </container>
-        <referenceContainer name="productlist.container">
+        <referenceContainer name="productlist.container" >
             <container name="header.list" >
                 <block class="NTTData\Practice\Block\Test\Productlist\Header"
-                name= "css.header"
+                name= "Header"
                 template="NTTData_Practice::test/list/header.phtml"/>
             </container>
             <container name="products.list" >

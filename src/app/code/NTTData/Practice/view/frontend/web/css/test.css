@@ -1,0 +1,20 @@
+.productlistDiv {
+  border-style: dashed;
+  color: blue;
+  padding: 5px;
+}
+
+.headerDiv {
+  border-style: dashed;
+  color: red;
+  padding-left: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.productsDiv {
+  border-style: dashed;
+  color: green;
+  padding-left: 5px;
+  padding: 5px;
+}

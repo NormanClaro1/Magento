@@ -1,1 +1,11 @@
-src/
+src/bin
+src/dev
+src/generate
+src/lib
+src/phpserver
+src/pub
+src/setup
+src/var
+src/vendor
+
+
