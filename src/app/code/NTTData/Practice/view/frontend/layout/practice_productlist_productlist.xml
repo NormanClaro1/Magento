@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+     <head>
+
+        <css src="NTTData_Practice::css/styles.css"/>
+
+        <css src="NTTData_Practice::js/test.js"/>
+
+    </head>
+
+    <referenceContainer name="content">
+        <container name="productlist.container" >
+            <block class="NTTData\Practice\Block\Test\Productlist"
+                name="practice_productlist_productlist"
+                template="NTTData_Practice::test/list/productlist.phtml" />
+        </container>
+        <referenceContainer name="productlist.container">
+            <container name="header.list" >
+                <block class="NTTData\Practice\Block\Test\Productlist\Header"
+                name= "css.header"
+                template="NTTData_Practice::test/list/header.phtml"/>
+            </container>
+            <container name="products.list" >
+                <block class="NTTData\Practice\Block\Test\Productlist\Products"
+                template="NTTData_Practice::test/list/products.phtml"/>
+            </container>
+        </referenceContainer>
+    </referenceContainer>
+
+
+</page>
