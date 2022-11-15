@@ -1,6 +1,6 @@
 src/bin
 src/dev
-src/generate
+src/generated
 src/lib
 src/phpserver
 src/pub
