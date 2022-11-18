@@ -4,7 +4,7 @@ class Productlist extends \Magento\Framework\View\Element\Template
 {
  /*
      * @var \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory
-
+*/
     protected $_productCollectionFactory;
 
     public function __construct(
@@ -26,8 +26,9 @@ class Productlist extends \Magento\Framework\View\Element\Template
             'name',
             'desc'
         );
+        $collection->setPageSize(10);
         return $collection;
-    } */
+    }
     public function getBlock()
 	{
 		echo '<h3>' . get_class($this) . '</h3>';

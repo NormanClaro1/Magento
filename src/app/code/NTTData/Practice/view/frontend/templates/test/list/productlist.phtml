@@ -8,6 +8,10 @@
 <div class="productlistDiv">
 <?php
 echo $block->getBlock();
+
+$ids = [1,2,3];
+$categoryProducts = $block->getProductCollectionByCategories($ids);
+foreach ($categoryProducts as $product) {
+    echo $product->getName() . ' - ' . $product->getProductUrl() . '<br />';
+}
 ?>
-
-

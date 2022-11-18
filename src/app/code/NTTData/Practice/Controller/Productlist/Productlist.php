@@ -26,7 +26,7 @@ class Productlist extends \Magento\Framework\App\Action\Action
 			date_default_timezone_set("America/Argentina/Buenos_Aires");
 		}
 		$time = date('H:i:s');
-		$pageFactory->getConfig()->getTitle()->set(__('Now being %1, I am learning translations',$time));
+		$pageFactory->getConfig()->getTitle()->set(__('Now being %1, I am learning translations', $time));
 		return $this->_pageFactory->create();
 
     }
