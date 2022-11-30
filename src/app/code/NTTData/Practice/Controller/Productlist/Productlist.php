@@ -9,7 +9,8 @@ class Productlist extends \Magento\Framework\App\Action\Action
 	public function __construct(
 		\Magento\Framework\App\Action\Context $context,
 		\Magento\Framework\View\Result\PageFactory $pageFactory,
-		\Magento\Store\Model\StoreManagerInterface $storeManager)
+		\Magento\Store\Model\StoreManagerInterface $storeManager
+		)
 	{
 		$this->storeManager = $storeManager;
 		$this->_pageFactory = $pageFactory;
@@ -33,4 +34,5 @@ class Productlist extends \Magento\Framework\App\Action\Action
 	{
 		echo '<h3>' . get_class($this) . '</h3>';
 	}
+
 }
