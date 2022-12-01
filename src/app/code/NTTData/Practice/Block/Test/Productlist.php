@@ -26,8 +26,9 @@ class Productlist extends \Magento\Framework\View\Element\Template
         $collection = $this->_productCollectionFactory->create();
         $collection->addAttributeToSelect('*');
         $collection->addCategoriesFilter(['in' => $ids]);
-        $collection->setOrder($this->Helper->getOrderDirection());
+        $collection->setOrder('name', $this->Helper->getOrderDirection());
         $collection->setPageSize($this->Helper->getLimit());
+        $collection->addAttributeToFilter('description', array('like' => '% '.$this->Helper->getOrderField().' %'));
         return $collection;
     }
 
@@ -37,6 +38,7 @@ class Productlist extends \Magento\Framework\View\Element\Template
 	}
     public function testEnable()
     {
-        return $this->Helper->getLimit();
+        return $this->Helper->getOrderDirection();
     }
+
 }

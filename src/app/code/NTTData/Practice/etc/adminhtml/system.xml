@@ -23,6 +23,7 @@
                 <field id="order_field" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Order Field</label>
                     <comment>Busqueda por atributo</comment>
+                    <source_model>NTTData\Practice\Model\Config\Source\Custom2</source_model>
                 </field>
                 <field id="order_direction" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Order Direction</label>

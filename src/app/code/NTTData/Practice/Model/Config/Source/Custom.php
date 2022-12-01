@@ -13,7 +13,7 @@ class Custom implements \Magento\Framework\Option\ArrayInterface
 
         return [
             ['value' => 'asc', 'label' => __('Ascendente')],
-            ['value' => 'desc', 'label' => __('Descendente')],
+            ['value' => 'desc', 'label' => __('Descendente')]
 
         ];
     }
