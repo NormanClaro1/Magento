@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="company" resource="default" engine="innodb" comment="Company Table">
+        <column xsi:type="smallint" name="id" padding="6" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="text" name="company_name" nullable="false" comment="Company Name"/>
+        <column xsi:type="text" name="first_name" nullable="false" comment="First Name"/>
+        <column xsi:type="text" name="last_name" nullable="false" comment="Last Name"/>
+        <column xsi:type="int" name="age" nullable="false" comment="Age"/>
+        <column xsi:type="text" name="type" nullable="false" comment="Designer type" />
+        <column xsi:type="text" name="language" nullable="false" comment="Language"/>
+        <column xsi:type="text" name="designer" nullable="false" comment="Designer"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+
+        <index referenceId="COMPANY_NAME" indexType="fulltext">
+            <column name="company_name"/>
+        </index>
+        <index referenceId="FIRST_NAME" indexType="fulltext">
+            <column name="first_name"/>
+        </index>
+        <index referenceId="LAST_NAME" indexType="fulltext">
+            <column name="last_name"/>
+        </index>
+
+        <index referenceId="TYPE" indexType="fulltext">
+            <column name="type"/>
+        </index>
+        <index referenceId="LANGUAGE" indexType="fulltext">
+            <column name="language"/>
+        </index>
+        <index referenceId="DESIGNER" indexType="fulltext">
+            <column name="designer"/>
+        </index>
+    </table>
+
+    <!-- <table name="language" resource="default" engine="innodb" comment="Language Grid Table">
+        <column xsi:type="smallint" name="id" padding="6" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="text" name="language" nullable="false" comment="Language"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+
+    </table>
+
+    <table name="designer" resource="default" engine="innodb" comment="Designer Grid Table">
+        <column xsi:type="smallint" name="id" padding="6" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="text" name="designer" nullable="false" comment="Designer"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+
+
+    </table> -->
+</schema>

@@ -1,5 +1,22 @@
 <?php
 return [
+    'cache_types' => [
+        'compiled_config' => 1,
+        'config' => 1,
+        'layout' => 1,
+        'block_html' => 1,
+        'collections' => 1,
+        'reflection' => 1,
+        'db_ddl' => 1,
+        'eav' => 1,
+        'customer_notification' => 1,
+        'config_integration' => 1,
+        'config_integration_api' => 1,
+        'full_page' => 1,
+        'config_webservice' => 1,
+        'translate' => 1,
+        'vertex' => 1
+    ],
     'backend' => [
         'frontName' => 'admin'
     ],
@@ -7,17 +24,17 @@ return [
         'driver' => 'file'
     ],
     'queue' => [
+        'consumers_wait_for_messages' => 1,
         'amqp' => [
             'host' => 'rabbitmq',
             'port' => '5672',
             'user' => 'magento',
             'password' => 'magento',
             'virtualhost' => '/'
-        ],
-        'consumers_wait_for_messages' => 1
+        ]
     ],
     'crypt' => [
-        'key' => 'f301b431baad237b6b74c543b68a50e3'
+        'key' => 'f3fa87e2ed8f28de42a2ddd7bf52d27a'
     ],
     'db' => [
         'table_prefix' => '',
@@ -103,33 +120,16 @@ return [
     'lock' => [
         'provider' => 'db',
         'config' => [
-            'prefix' => null
+            'prefix' => ''
         ]
     ],
     'directories' => [
         'document_root_is_pub' => true
     ],
-    'cache_types' => [
-        'config' => 1,
-        'layout' => 1,
-        'block_html' => 1,
-        'collections' => 1,
-        'reflection' => 1,
-        'db_ddl' => 1,
-        'compiled_config' => 1,
-        'eav' => 1,
-        'customer_notification' => 1,
-        'config_integration' => 1,
-        'config_integration_api' => 1,
-        'full_page' => 1,
-        'config_webservice' => 1,
-        'translate' => 1,
-        'vertex' => 1
-    ],
     'downloadable_domains' => [
         'magento.test'
     ],
     'install' => [
-        'date' => 'Wed, 02 Nov 2022 13:21:29 +0000'
+        'date' => 'Fri, 23 Dec 2022 14:17:44 +0000'
     ]
 ];
