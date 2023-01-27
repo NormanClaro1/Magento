@@ -43,19 +43,10 @@ class MassAverage extends Action implements \Magento\Framework\App\Action\HttpPo
     */
     public function execute()
     {
+
         $collection = $this->filter->getCollection($this->collectionFactory->create());
-        $objectManager =   \Magento\Framework\App\ObjectManager::getInstance();
-        $connection = $objectManager->get('Magento\Framework\App\ResourceConnection')->getConnection('\Magento\Framework\App\ResourceConnection::DEFAULT_CONNECTION');
-        $ages = $connection->fetchAll("SELECT age FROM company");
-
-    // echo "<pre>";print_r($ages);
-
-
-        $collectionSize = $collection->getSize();
-
-
         $sum = $recordAges = 0;
-       foreach ($ages as $item) {
+       foreach ($collection as $item) {
             $sum += $item['age'];
             $recordAges++;
 

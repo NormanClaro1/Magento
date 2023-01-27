@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="NTTData\PokeAPi\Api\PokemonRepositoryInterface" type="NTTData\PokeApi\Model\Api\PokemonRepository"/>
+    <preference for="NTTData\PokeApi\Api\RequestItemInterface" type="NTTData\PokeApi\Model\Api\RequestItem"/>
+    <preference for="NTTData\PokeApi\Api\ResponseItemInterface" type="NTTData\PokeApi\Model\Api\ResponseItem"/>
+</config>

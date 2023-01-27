@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="https://pokeapi.co/api/v2/pokemon/:id" method="GET">
+        <service class="NTTData\PokeApi\Api\PokemonRepositoryInterface" method="getItem" />
+        <resources>
+            <resource ref="NTTData_PokeApi::pokemon_get" />
+        </resources>
+    </route>
+    <route url="https://pokeapi.co/api/v2/generation/:id" method="PUT">
+        <service class="NTTData\PokeApi\Api\PokemonRepositoryInterface" method="setGeneration" />
+        <resources>
+            <resource ref="NTTData_PokeApi::pokemon_set_description" />
+        </resources>
+    </route>
+</routes>
